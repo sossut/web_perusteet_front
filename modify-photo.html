@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="https://placekeanu.com/150/150">
+            <ul>
+                <li><a href="front.html">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Search</a></li>
+                <li><a href="">Random</a></li>
+                <li><a href="">History</a></li>
+                <li><a href="add-photo.html">Add Photo</a></li>
+                <li><a href="login.html">Add User</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="top">
+            <div>
+
+            </div>
+        </section>
+        <div class="forms">
+            <div class="form-wrapper">
+                <h3>Modify photo</h3>
+                <form validate id="modPhotoForm" class="light-border">
+                    <input class="light-border" type="text" name="description" placeholder="Description" required>                   
+                    <select class="light-border add-owner" name="UserID" required>
+                        <option value="">Select owner</option>
+                    </select>
+                    <input type="hidden" name="id">
+                    <button class="light-border" type="submit">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/check-login.js"></script>
+    <script src="js/modify-photo.js"></script>
+    <script src="js/serialize.js"></script>
+</body>
+
+</html>
