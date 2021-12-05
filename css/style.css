@@ -111,3 +111,7 @@ article {
 #articles li {
     margin: 40px 20px;
 }
+#map {
+  width: 100%;
+  height: 30rem;
+}
