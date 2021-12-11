@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Add Photo</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
     <style>
 
     </style>
@@ -14,7 +17,9 @@
 <body>
     <header>
         <nav>
-            <img src="https://placekeanu.com/150/150">
+            <a href="front.html">
+                <img id="logo" src="media/leaf-logo.png" />
+            </a>
             <ul>
                 <li><a href="front.html">Home</a></li>
                 <li><a href="">Profile</a></li>
@@ -36,7 +41,7 @@
         <div class="forms" style="display: flex; justify-content: center;">
             <div class="form-wrapper">
                 <h3>Add photo</h3>
-                <form validate action="http://localhost:3000/photo" method="post" enctype="multipart/form-data" class="light-border" id="addPhotoForm">                
+                <form validate action="http://10.114.34.24/app/photo" method="post" enctype="multipart/form-data" class="light-border" id="addPhotoForm">                
                     <input class="light-border" type="text" name="description" placeholder="Description" required>                    
                     
                     <input class="light-border" type="file" name="photo" accept="image/*" placeholder="Choose File">

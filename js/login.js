@@ -1,6 +1,6 @@
 'use strict';
 
-const url = 'http://localhost:3000';
+const url = 'https://10.114.34.24/app';
 
 const loginForm = document.querySelector('#login-form');
 const addUserForm = document.querySelector('#add-user-form');
@@ -11,9 +11,9 @@ loginForm.addEventListener('submit', async (evt) => {
   evt.preventDefault();
   const data = serializeJson(loginForm);
   const fetchOptions = {
-    method: 'POST',
+    method: 'POST',  
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json',      
     },
     body: JSON.stringify(data),
   };
