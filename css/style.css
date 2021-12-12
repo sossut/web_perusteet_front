@@ -84,6 +84,9 @@ form {
   background-color: #faedcd;
   padding: 20px 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .form-wrapper {
     display: flex;
@@ -112,7 +115,7 @@ form div input, form label, #add-user-form input, #addPhotoButton, #desc {
 }
 form button {
     
-    width: 50%;
+    width: 130px;
   margin: 5px 20px;
   padding: 7px;
   background-color: #a7c957;
@@ -185,12 +188,7 @@ article {
   background-size: cover;
   background-attachment: fixed;
 }
-/* #frontMain::after {
-    filter: blur(8px);
-    -webkit-filter: blur(5px);
-    height: 100%;
-    position: absolute;
-} */
+
 #likedMain {
   background-image: url(../media/nature2.jpg);
   min-height: 100vh;
