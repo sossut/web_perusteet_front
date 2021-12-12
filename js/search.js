@@ -4,29 +4,17 @@ const url = 'https://10.114.34.24/app';
 
 const searchFrom = document.querySelector('#search-form');
 const ul = document.querySelector('#articles');
-
+let searchParam = '';
 searchFrom.addEventListener('submit', async(evt) => {
     ul.innerHTML = '';
     evt.preventDefault();
     try {
-        const fetchOptions = {
-            method: 'GET',
-            headers: {
-                Authorization: 'Bearer ' + sessionStorage.getItem('token'),
-            },
-            
-        };
-        const searchq = document.getElementById('search-value').value;
         
-        const response = await fetch(url + '/photo/search/' + searchq, fetchOptions);
-        const photos = await response.json();
-        if (photos.length > 0) {
-            createCards(photos);            
-        } else {            
-            const p = document.createElement('p');            
-            p.innerHTML = 'No photos found with matching description. Try something else.';
-            ul.appendChild(p);            
-        }        
+        const searchq = document.getElementById('search-value').value;
+        searchParam = searchq;
+        getPhoto(searchq);
+        
+                
     } catch (e) {
         console.log(e.message);
     }
@@ -61,7 +49,24 @@ const createCards = (photos) => {
         const p3 = document.createElement('p');
         p3.innerHTML = `By: ${photo.UserName}`;
 
-        
+        const likePhoto = document.createElement('i');
+        likePhoto.innerHTML= '<i class="fas fa-thumbs-up"></i>'
+        likePhoto.addEventListener('click', async () => {
+            const fetchOptions = {
+                method: 'POST',
+                headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                },                
+            };
+            try {
+                const response = await fetch(url + '/photo/' + photo.PhotoID, fetchOptions);
+                const json = await response.json();
+                console.log('like response', json);
+                getPhoto(searchParam);
+            } catch (e) {
+                console.log(e.message);
+            }
+        })
 
         const li = document.createElement('li');
         li.classList.add('light-border');
@@ -71,6 +76,32 @@ const createCards = (photos) => {
         li.appendChild(p1);
         li.appendChild(p2);
         li.appendChild(p3);
+        li.appendChild(likePhoto);
         ul.appendChild(li);
     });    
 }
+const getPhoto = async (query) => {
+  try {
+    const fetchOptions = {
+            method: 'GET',
+            headers: {
+                Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+            },
+            
+        };
+    const response = await fetch(url + '/photo/search/' + query, fetchOptions);
+    const photos = await response.json();
+    if (photos.length > 0) {
+            createCards(photos);
+                       
+        } else {            
+            const p = document.createElement('p');            
+            p.innerHTML = 'No photos found with matching description. Try something else.';
+            ul.appendChild(p);            
+        }
+    
+    
+  } catch (e) {
+    console.log(e.message);
+  }
+};
