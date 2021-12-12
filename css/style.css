@@ -146,6 +146,10 @@ article {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 300px;
+    
+}
+.u-non-blurred{
+    
     z-index: 1;
     position: relative;
 }

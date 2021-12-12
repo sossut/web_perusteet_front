@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4dc814c425.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="front.html">
+                <img id="logo" src="media/leaf-logo.png" />
+            </a>
+            <ul>
+                <li><a href="front.html">Home</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Search</a></li>
+                <li><a href="">Random</a></li>
+                <li><a href="liked-photos.html">Liked Photos</a></li>
+                <li><a href="add-photo.html">Add Photo</a></li>
+                <li><a href="login.html">Login/Sign Up</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="top">
+            <div>
+
+            </div>
+        </section>
+        
+        <div id="likedMain" class="background background-filter">
+            <form id="search-form" class="u-non-blurred">
+                <input id="search-value" type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <ul id="articles" class="u-non-blurred">
+        
+            </ul>
+        
+        
+        </div>
+
+    </main>
+    <script src="js/serialize.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/search.js"></script>
+    
+
+
+</body>
+
+</html>
