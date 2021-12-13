@@ -9,9 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
-    <style>
+    <script src="https://kit.fontawesome.com/4dc814c425.js" crossorigin="anonymous"></script>
 
-    </style>
 </head>
 
 <body>
@@ -33,28 +32,25 @@
         </nav>
     </header>
     <main>
-        <section id="top">
-            <div>
 
+        <div id="frontMain" class="background background-filter">
+            <div id="container">
+                <article id="random" class="u-non-blurred">
+                
+                </article>
             </div>
-        </section>
-        <div class="forms">
-            <div class="form-wrapper" style="margin: 0 auto;">
-                <h3>Modify photo</h3>
-                <form validate id="modPhotoForm" class="light-border">
-                    <input class="light-border" type="text" name="description" placeholder="Description" required>                   
-                    <select class="light-border add-owner" name="UserID" required>
-                        <option value="">Select owner</option>
-                    </select>
-                    <input type="hidden" name="id">
-                    <button class="light-border" type="submit">Save changes</button>
-                </form>
-            </div>
+            
+            
         </div>
+
+
     </main>
-    <script src="js/check-login.js"></script>
-    <script src="js/modify-photo.js"></script>
     <script src="js/serialize.js"></script>
+    <script src="js/check-login.js"></script>
+
+    <script src="js/random.js"></script>
+
+
 </body>
 
 </html>

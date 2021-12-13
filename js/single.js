@@ -14,7 +14,7 @@ const photoID = getQParam('id');
 // select existing html elements
 const img = document.querySelector('#image img');
 
-// add existing cat data to form
+
 const getPhoto = async (id) => {
   const fetchOptions = {
     headers: {
