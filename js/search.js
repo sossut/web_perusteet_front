@@ -2,6 +2,15 @@
 
 const url = 'https://10.114.34.24/app';
 
+const getQParam = (param) => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams.get(param);
+};
+
+const searchQuery = getQParam('query');
+
+
 const searchFrom = document.querySelector('#search-form');
 const ul = document.querySelector('#articles');
 let searchParam = '';
@@ -105,3 +114,6 @@ const getPhoto = async (query) => {
     console.log(e.message);
   }
 };
+if (searchQuery) {
+    getPhoto(searchQuery);
+}

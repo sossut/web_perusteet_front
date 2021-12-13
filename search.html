@@ -31,6 +31,15 @@
                 <li><a href="add-photo.html">Add Photo</a></li>
                 <li><a href="login.html">Login/Sign Up</a></li>
                 <li><a href="logout.html">Logout</a></li>
+                <li>
+                    <di class="search-container">
+                        <form id="nav-search" class="u-non-blurred"
+                            action="https://users.metropolia.fi/~mikaeala/web_perusteet/projekti_front/search.html">
+                            <input id="search-value" type="text" placeholder="Search.." name="query">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </di>
+                </li>
             </ul>
         </nav>
     </header>
@@ -38,13 +47,16 @@
         
         
         <div id="likedMain" class="background background-filter">
-            <form id="search-form" class="u-non-blurred">
-                <input id="search-value" type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <ul id="articles" class="u-non-blurred">
-        
-            </ul>
+            <div id="container">
+                <form id="search-form" class="u-non-blurred forms-norm" action="https://10.114.34.24/app/search/">
+                    <input id="search-value" type="text" placeholder="Search.." name="query">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <ul id="articles" class="u-non-blurred">
+                
+                </ul>
+            </div>
+            
         
         
         </div>

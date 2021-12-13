@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4dc814c425.js" crossorigin="anonymous"></script>
     <style>
 
     </style>
@@ -29,6 +30,15 @@
                 <li><a href="add-photo.html">Add Photo</a></li>
                 <li><a href="login.html">Login/Sign Up</a></li>
                 <li><a href="logout.html">Logout</a></li>
+                <li>
+                    <di class="search-container">
+                        <form id="nav-search" class="u-non-blurred"
+                            action="https://users.metropolia.fi/~mikaeala/web_perusteet/projekti_front/search.html">
+                            <input id="search-value" type="text" placeholder="Search.." name="query">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </di>
+                </li>
             </ul>
         </nav>
     </header>
@@ -41,7 +51,7 @@
         <div class="forms">
             <div class="form-wrapper" style="margin: 0 auto;">
                 <h3>Modify photo</h3>
-                <form validate id="modPhotoForm" class="light-border">
+                <form validate id="modPhotoForm" class="light-border forms-norm">
                     <input class="light-border" type="text" name="description" placeholder="Description" required>                   
                     <select class="light-border add-owner" name="UserID" required>
                         <option value="">Select owner</option>

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4dc814c425.js" crossorigin="anonymous"></script>
     <style>
         
     </style>
@@ -29,6 +30,15 @@
                 <li><a href="add-photo.html">Add Photo</a></li>
                 <li><a href="login.html">Login/Sign Up</a></li>
                 <li><a href="logout.html">Logout</a></li>
+                <li>
+                    <di class="search-container">
+                        <form id="nav-search" class="u-non-blurred"
+                            action="https://users.metropolia.fi/~mikaeala/web_perusteet/projekti_front/search.html">
+                            <input id="search-value" type="text" placeholder="Search.." name="query">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </di>
+                </li>
             </ul>
         </nav>
     </header>
@@ -42,7 +52,7 @@
             <div class="form-wrapper" id="loginSide">
                 <h3> Already have an account? </h3>
                 <h3>Login</h3>
-                <form id="login-form" class="light-border" action="https://10.114.34.24/app/auth/login" method="post">
+                <form id="login-form" class="light-border forms-norm" action="https://10.114.34.24/app/auth/login" method="post">
                     <div>
                         <label>Email:</label>
                         <input  class="light-border" type="text" name="username" />
@@ -61,7 +71,7 @@
             <div class="form-wrapper" id="registerSide">
                 <h3>Create a new account</h3>
                 <h3>Add user</h3>
-                <form validate action="https://10.114.34.24/app/user" method="post" class="light-border" id="add-user-form">
+                <form validate action="https://10.114.34.24/app/user" method="post" class="light-border forms-norm" id="add-user-form">
                     <input class="light-border" type="text" name="name" placeholder="Name" required minlength="3">
                     <input class="light-border" type="text" name="email" placeholder="email" required>
                     <input class="light-border" type="password" name="passwd" placeholder="Password" required pattern="(?=.*[A-Z]).{8,}">
