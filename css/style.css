@@ -158,6 +158,10 @@ form button {
     margin: 0 300px;
     
 }
+#search-form {
+  margin: auto;
+  top: 1.5em;
+}
 #random img {
   
   max-width: 100%;
