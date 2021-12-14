@@ -76,21 +76,24 @@ const createCards = (photos) => {
             delButton.innerHTML = 'Delete';
             delButton.classList.add('button');
             delButton.addEventListener('click', async () => {
-                const fetchOptions = {
-                    method: 'DELETE',
-                    headers: {
-                        Authorization: 'Bearer ' + sessionStorage.getItem('token'),
-                    },
-                };
-                try {
-                    const response = await fetch(url + '/photo/' + photo.PhotoID, fetchOptions);
-                    const json = await response.json();
-                    console.log('delete response', json);
-                    getPhoto();
-                } catch (e) {
-                    
-                    console.log(e.message);
-                }
+                const conf = 'Are you sure you want to delete this picture. This can not be reversed.'
+                if (confirm(conf) == true) {
+                    const fetchOptions = {
+                        method: 'DELETE',
+                        headers: {
+                            Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                        },
+                    };
+                    try {
+                        const response = await fetch(url + '/photo/' + photo.PhotoID, fetchOptions);
+                        const json = await response.json();
+                        console.log('delete response', json);
+                        getPhoto();
+                    } catch (e) {
+                        
+                        console.log(e.message);
+                    }
+                }    
             });
 
             
