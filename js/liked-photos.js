@@ -39,7 +39,7 @@ const createCards = (photos) => {
 
         const li = document.createElement('li');
         li.classList.add('light-border');
-
+        
         li.appendChild(h2);
         li.appendChild(figure);
         li.appendChild(p1);

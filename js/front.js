@@ -98,7 +98,7 @@ const createCards = (photos) => {
             
             li.appendChild(modButton);
             li.appendChild(delButton);
-            }
+        }
 
         
         

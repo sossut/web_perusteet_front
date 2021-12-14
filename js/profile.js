@@ -58,12 +58,45 @@ const createCards = (photos) => {
             const li = document.createElement('li');
             li.classList.add('light-border');
 
+            const modButton = document.createElement('a');
+            modButton.innerHTML = 'Modify';
+            modButton.href = `modify-photo.html?id=${photo.PhotoID}`;
+            modButton.classList.add('button');
+
+            const delButton = document.createElement('button');
+            delButton.innerHTML = 'Delete';
+            delButton.classList.add('button');
+            delButton.addEventListener('click', async () => {
+                const fetchOptions = {
+                    method: 'DELETE',
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                    },
+                };
+                try {
+                    const response = await fetch(url + '/photo/' + photo.PhotoID, fetchOptions);
+                    const json = await response.json();
+                    console.log('delete response', json);
+                    getPhoto();
+                } catch (e) {
+                    
+                    console.log(e.message);
+                }
+            });
+
+            
+
+            
+            
+
             li.appendChild(h2);
             li.appendChild(figure);
             li.appendChild(p1);
             li.appendChild(p2);
             li.appendChild(p3);
             li.appendChild(likePhoto);
+            li.appendChild(modButton);
+            li.appendChild(delButton);
             ul.appendChild(li);
         
             if (user.Role === 0 || user.UserID === photo.UserID) {
