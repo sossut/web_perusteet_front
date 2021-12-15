@@ -317,6 +317,7 @@ form button:active {
   max-height: 55vh;
   max-width: 100%;
   display: block;
+  margin: auto;
   padding: 1em;
 }
 .button1 {
