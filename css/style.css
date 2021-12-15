@@ -222,3 +222,13 @@ form button {
   background-size: cover;
 }
 
+.button1 {
+  font-size: 20px;
+  margin: 0 0.1em;
+  color: black;
+  background-color: #936639;
+  padding: 3px;
+  font-family: "Staatliches", cursive;
+  color: #a7c957;
+  border-radius: 5px;
+}
