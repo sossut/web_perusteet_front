@@ -43,20 +43,20 @@
         </nav>
     </header>
     <main>
-        <section id="top">
-            <div>
+        <div id="addMain" class="background background-filter">
+            <div class="u-non-blurred" style="width: 50%; margin: auto">
+                <div class="forms" style="display: flex; justify-content: center">
+                    <div class="form-wrapper">
+                        <h3>Add photo</h3>
+                        <form validate action="https://10.114.34.24/app/photo" method="post" enctype="multipart/form-data"
+                            class="light-border forms-norm" id="addPhotoForm">
+                            <input class="light-border" type="text" name="description" placeholder="Description" required />
         
-            </div>
-        </section>
-        <div class="forms" style="display: flex; justify-content: center;">
-            <div class="form-wrapper">
-                <h3>Add photo</h3>
-                <form validate action="https://10.114.34.24/app/photo" method="post" enctype="multipart/form-data" class="light-border forms-norm" id="addPhotoForm">                
-                    <input class="light-border" type="text" name="description" placeholder="Description" required>                    
-                    
-                    <input class="light-border" type="file" name="photo" accept="image/*" placeholder="Choose File">
-                    <button class="light-border" type="submit">Save</button>
-                </form>
+                            <input class="light-border" type="file" name="photo" accept="image/*" placeholder="Choose File" />
+                            <button class="light-border" type="submit">Save</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

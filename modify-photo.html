@@ -43,22 +43,21 @@
         </nav>
     </header>
     <main>
-        <section id="top">
-            <div>
-
-            </div>
-        </section>
-        <div class="forms">
-            <div class="form-wrapper" style="margin: 0 auto;">
-                <h3>Modify photo</h3>
-                <form validate id="modPhotoForm" class="light-border forms-norm">
-                    <input class="light-border" type="text" name="description" placeholder="Description" required>                   
-                    <select class="light-border add-owner" name="UserID" required>
-                        <option value="">Select owner</option>
-                    </select>
-                    <input type="hidden" name="id">
-                    <button class="light-border" type="submit">Save changes</button>
-                </form>
+        <div id="modMain" class="background background-filter">
+            <div class="u-non-blurred">
+                <div class="forms">
+                    <div class="form-wrapper" style="margin: 0 auto">
+                        <h3>Modify photo</h3>
+                        <form validate id="modPhotoForm" class="light-border forms-norm">
+                            <input class="light-border" type="text" name="description" placeholder="Description" required />
+                            <select class="light-border add-owner" name="UserID" required>
+                                <option value="">Select owner</option>
+                            </select>
+                            <input type="hidden" name="id" />
+                            <button class="light-border" type="submit">Save changes</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
