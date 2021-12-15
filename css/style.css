@@ -107,7 +107,9 @@ h3 {
   letter-spacing: 10px;
   font-size: 2em;
   text-shadow: 2px 2px 4px black;
+  text-align: center;
 }
+
 input {
     width: 250px;
     height: 2.5em;
