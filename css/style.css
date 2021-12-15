@@ -231,6 +231,7 @@ form button:active {
   margin: auto;
   margin-top: 10px;
   height: 30rem;
+  padding: 1em;
 }
 .background-filter::after {
   -webkit-backdrop-filter: blur(5px); 
