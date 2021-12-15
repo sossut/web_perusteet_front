@@ -5,7 +5,7 @@ const map = new mapboxgl.Map({
   container: 'map', // container id
   style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
   center: [24, 60], // starting position [lng, lat]
-  zoom: 13, // starting zoom
+  zoom: 6, // starting zoom
 });
 
 const addMarker = (Location) => {
