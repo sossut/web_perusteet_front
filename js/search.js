@@ -19,7 +19,8 @@ searchFrom.addEventListener('submit', async(evt) => {
     evt.preventDefault();
     try {
         
-        const searchq = document.getElementById('search-value').value;
+        const searchq = document.getElementById('search-value1').value;
+        console.log(searchq);
         searchParam = searchq;
         getPhoto(searchq);
         
@@ -100,6 +101,7 @@ const getPhoto = async (query) => {
         };
     const response = await fetch(url + '/photo/search/' + query, fetchOptions);
     const photos = await response.json();
+    console.log(photos);
     if (photos.length > 0) {
             createCards(photos);
                        
