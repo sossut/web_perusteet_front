@@ -35,16 +35,38 @@ const createCards = (photos) => {
         const p3 = document.createElement('p');
         p3.innerHTML = `By: ${photo.UserName}`;
 
-        
+        const deleteLikeButton = document.createElement('button');
+        deleteLikeButton.innerHTML = 'Delete Like';
+
+        deleteLikeButton.addEventListener('click', async () => {
+          const fetchOptions = {
+                method: 'DELETE',
+                headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                },
+                
+            };
+            try {
+                const response = await fetch(url + '/photo/like/' + photo.PhotoID, fetchOptions);
+                const json = await response.json();
+                console.log('delete like response', json);
+                getPhoto();
+            } catch (e) {
+                console.log(e.message);
+            }
+        })
 
         const li = document.createElement('li');
         li.classList.add('light-border');
         
+
+
         li.appendChild(h2);
         li.appendChild(figure);
         li.appendChild(p1);
         li.appendChild(p2);
         li.appendChild(p3);
+        li.appendChild(deleteLikeButton);
         ul.appendChild(li);
     });    
 }
